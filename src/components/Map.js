@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import GoogleMapReact from 'google-map-react';
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const api = "AIzaSyAx3lbC838VZVnuCfEO2QMBb5eeJ7LY4-I";
