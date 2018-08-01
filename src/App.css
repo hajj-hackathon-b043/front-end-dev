@@ -1,3 +1,7 @@
+body * {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -50,3 +54,56 @@
 }
 
 /* map */
+
+.wizard {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1fab82;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s;
+  visibility: visible;
+  z-index: 1;
+}
+
+.wizard.fade-out {
+  visibility: hidden;
+  z-index: 0;
+}
+
+.wizard p {
+  color: #fff;
+}
+
+.wizard-welcome {
+  color: #fff;
+}
+
+.wizard__page-title {
+  margin: 0;
+  font-size: 25px;
+}
+
+.intro-bottom-nav {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.intro-bottom-nav button {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.intro-bottom-nav button:focus,
+.intro-bottom-nav button:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.space-between {
+  justify-content: space-between;
+}
