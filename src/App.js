@@ -3,17 +3,16 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
 import IntroWizardCont from './containers/IntroWizardCont';
-import Map from './components/Map'
+import Mappage from './components/mappage';
 class App extends Component {
-	render() {
-		return ( 
-			<div className = "App" >
-				<Route path = "/" component = { IntroWizardCont }/> 
-        <Route path = "/Map" component = { Map }/> 
-
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="App">
+        <Route exact path="/" component={IntroWizardCont} />
+        <Route path="/Map" component={Mappage} />
+      </div>
+    );
+  }
 }
 
 export default connect()(App);
