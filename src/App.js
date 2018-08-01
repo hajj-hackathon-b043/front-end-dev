@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom';
 import 'normalize.css';
 import './App.css';
 import IntroWizardCont from './containers/IntroWizardCont';
+import Mappage from './components/mappage';
+
 import Map from './components/Map'
 import { launchApp } from './actions';
 
@@ -17,7 +19,7 @@ class App extends Component {
 		return (
 			<div className = "App">
 				{ isFirstTimeLoading && <Route path = "/intro" component = { IntroWizardCont } /> }
-        		<Route path = "/Map" component = { Map }/>
+        		<Route path="/Map" component={Mappage} />
 			</div>
 		);
 	}

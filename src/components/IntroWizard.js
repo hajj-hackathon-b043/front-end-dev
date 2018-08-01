@@ -37,14 +37,14 @@ class IntroWizard extends Component {
     }
     componentDidMount() {
         this.getQueryParams();
-        // this.fadeOutWelcomeScr();
+        this.fadeOutWelcomeScr();
     }
     render() {
         const { currentStep, totalSteps, welcome } = this.state;
         const { classes } = this.props;
 
         return (
-            <div className="wizard fade-out">
+            <div className="wizard">
                 {welcome && <Welcome />}
                 {!welcome && (
                     <React.Fragment>
