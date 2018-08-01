@@ -23,6 +23,30 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+/* map */
+
+.mapgrid {
+  text-align: 'center';
+  color: red;
+  background-color: red;
+  height: 80%;
+  width: 100%;
+}
+.mapcontainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* map */
