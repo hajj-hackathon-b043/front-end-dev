@@ -1,0 +1,136 @@
+color {
+  color: #1a1b1e #61dafb #ff0033 #0f9ef2 #3a393a #6cc24a;
+}
+
+.Body {
+  background: #1a1b1e;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #0f9ef2;
+  font-size: 1.5rem;
+}
+.hr {
+  width: 60%;
+}
+
+.icon {
+  font-size: 8rem;
+}
+
+.body {
+  padding: 25px;
+  border-radius: 20px;
+  align-self: center;
+  margin: auto;
+  border-color: #3a393a;
+  border-style: dotted;
+  align-self: center;
+}
+
+.container {
+  height: 800px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hand {
+  color: #6cc24a;
+  position: absolute;
+  font-size: 5rem;
+  margin-top: 50px;
+}
+
+.text {
+  top: 50%;
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+.loading {
+  color: #61dafb;
+}
+
+.ERROR {
+  color: #ff0033;
+}
+
+/*Profile*/
+
+.top {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  text-align: left;
+}
+
+.bottom {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav {
+  color: #fff;
+}
+
+.Id {
+  color: #6cc24a;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.containbox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.Icons-select {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.select {
+  color: #0f9ef2;
+  padding: 20px;
+}
+
+.white {
+  color: #fff;
+}
+
+.bell {
+  position: absolute;
+  right: 15px;
+}
+
+.NotificationList {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.back {
+  margin: 5px;
+}

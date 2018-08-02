@@ -461,3 +461,26 @@ body * {
 .space-between {
   justify-content: space-between;
 }
+
+/*QR*/
+
+.QRscan {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1fab82;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s;
+  visibility: visible;
+  z-index: 1;
+}
+
+.Camera {
+  width: 350px;
+}
+
+.QRbutton {
+}

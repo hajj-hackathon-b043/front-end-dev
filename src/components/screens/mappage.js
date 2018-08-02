@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './screens.css';
 import Map from './Map';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';

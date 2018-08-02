@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import './screens.css';
 import GoogleMapReact from 'google-map-react';
 import { FaWalking } from 'react-icons/fa';
 
