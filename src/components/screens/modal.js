@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
+import SimpleCard from './card';
+import { IoMdHelpCircleOutline } from 'react-icons/io';
 
 const styles = theme => ({
   paper: {
@@ -35,8 +37,19 @@ class SimpleModal extends React.Component {
 
     return (
       <div>
-        <Typography gutterBottom>Click to get the full Modal experience!</Typography>
-        <Button onClick={this.handleOpen}>Open Modal</Button>
+        <Button
+          variant="fab"
+          color="primary"
+          aria-label="Add"
+          style={{
+            position: 'relative',
+            alignSelf: 'flex-end',
+            bottom: '10px',
+            right: '0px'
+          }}
+          onClick={this.handleOpen}>
+          <IoMdHelpCircleOutline className="bell" />
+        </Button>
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
@@ -50,7 +63,9 @@ class SimpleModal extends React.Component {
               <p className="floatLeft">i18</p>
               <p className="floatRight">الاسئلة الشائعة</p>
             </Typography>
-            <div className="qustionsarea" />
+            <div className="qustionsarea">
+              <SimpleCard />
+            </div>
           </div>
         </Modal>
       </div>

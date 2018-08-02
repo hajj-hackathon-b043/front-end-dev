@@ -8,7 +8,9 @@ import { FaFemale } from 'react-icons/fa';
 import { FaMale } from 'react-icons/fa';
 import { FaUtensils } from 'react-icons/fa';
 import { FaBell } from 'react-icons/fa';
-import { IoMdHelpCircleOutline } from 'react-icons/io';
+
+//modal imported..
+import SimpleModalWrapped from './modal';
 
 // import flag from './img/ksa.png';
 // import flag from './img/bangladesh.png';
@@ -122,19 +124,9 @@ class Profile extends Component {
               </Button>
             </div>
           </div>
-          <Button
-            variant="fab"
-            color="primary"
-            aria-label="Add"
-            style={{
-              position: 'relative',
-              alignSelf: 'flex-end',
-              bottom: '10px',
-              right: '10px'
-            }}>
-            <IoMdHelpCircleOutline className="bell" />
-          </Button>
         </div>
+
+        <SimpleModalWrapped />
       </div>
     );
   }

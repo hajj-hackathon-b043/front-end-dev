@@ -157,8 +157,13 @@ color {
 }
 
 .qustionsarea {
-  background-color: red;
   width: 100%;
   height: 80%;
   display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.sound {
+  font-size: 1.25rem;
+  color: #0f9ef2;
 }
