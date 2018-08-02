@@ -7,11 +7,11 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { FaVolumeUp } from 'react-icons/fa';
+import translate from '../../I18N/I8';
 
 const styles = {
   card: {
     minWidth: 275,
-    height: 120,
     margin: 20
   },
   bullet: {
@@ -31,6 +31,21 @@ const styles = {
   }
 };
 
+const locale = {
+  modalFAQ: {
+    en: 'FAQs',
+    ar: 'الأسئلة الشائعه'
+  },
+  FAQsone: {
+    en: 'are you lost ?',
+    ar: 'هل انت ضائع ؟'
+  },
+  FAQstwo: {
+    en: 'are you fine ?',
+    ar: 'هل انت بخير ؟'
+  }
+};
+
 function SimpleCard(props) {
   const { classes } = props;
 
@@ -39,13 +54,10 @@ function SimpleCard(props) {
       <Card className={classes.card}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary">
-            faq
+            هل انت بخير ؟
           </Typography>
           <hr />
-          <Typography component="p" className={classes.main}>
-            lang2<br />
-            {'"a benevolent smile"'}
-          </Typography>
+          <Typography component="p">{translate(locale, 'FAQstwo')}</Typography>
         </CardContent>
         <CardActions>
           <Button size="small">
@@ -56,47 +68,10 @@ function SimpleCard(props) {
       <Card className={classes.card}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary">
-            faq
+            هل انت ضائع؟
           </Typography>
           <hr />
-          <Typography component="p">
-            lang2<br />
-            {'"a benevolent smile"'}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">
-            <FaVolumeUp className="sound" />
-          </Button>
-        </CardActions>
-      </Card>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography className={classes.title} color="textSecondary">
-            faq
-          </Typography>
-          <hr />
-          <Typography component="p">
-            lang2<br />
-            {'"a benevolent smile"'}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">
-            <FaVolumeUp className="sound" />
-          </Button>
-        </CardActions>
-      </Card>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography className={classes.title} color="textSecondary">
-            faq
-          </Typography>
-          <hr />
-          <Typography component="p">
-            lang2<br />
-            {'"a benevolent smile"'}
-          </Typography>
+          <Typography component="p">{translate(locale, 'FAQsone')}</Typography>
         </CardContent>
         <CardActions>
           <Button size="small">

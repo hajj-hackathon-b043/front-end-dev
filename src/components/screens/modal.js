@@ -6,7 +6,7 @@ import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import SimpleCard from './card';
 import { IoMdHelpCircleOutline } from 'react-icons/io';
-
+import translate from '../../I18N/I8';
 const styles = theme => ({
   paper: {
     position: 'absolute',
@@ -18,6 +18,17 @@ const styles = theme => ({
     top: '35px'
   }
 });
+
+const locale = {
+  profileFood: {
+    en: 'Food',
+    ar: 'غذاء'
+  },
+  modalFAQ: {
+    en: 'FAQs',
+    ar: 'الأسئلة الشائعه'
+  }
+};
 
 class SimpleModal extends React.Component {
   state = {
@@ -60,7 +71,7 @@ class SimpleModal extends React.Component {
               variant="title"
               id="modal-title"
               styel={{ right: '0', display: 'flex', justifyContent: 'space-between', backgroundColor: 'blue' }}>
-              <p className="floatLeft">i18</p>
+              <p className="floatLeft">{translate(locale, 'modalFAQ')}</p>
               <p className="floatRight">الاسئلة الشائعة</p>
             </Typography>
             <div className="qustionsarea">
