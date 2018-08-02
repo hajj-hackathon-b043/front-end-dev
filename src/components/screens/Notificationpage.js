@@ -6,6 +6,17 @@ import { FaArrowRight } from 'react-icons/fa';
 import Button from '@material-ui/core/Button';
 
 class Notificationpage extends Component {
+	state = {
+		textNoti: ''
+	}
+
+	submitText = (e) => {
+		const { textNoti } = this.state;
+
+		if (textNoti) {
+			this.props.history.push('/Profile');
+		}
+	}
   render() {
     return (
       <div className="Body">
@@ -24,21 +35,27 @@ class Notificationpage extends Component {
             <div className="navtextnoti">إعلام</div>
           </div>
         </div>
-        <div className="NotificationList">
-          <div className="bubble">السلام عليكم</div>
+        <div className="NotificationList-wrapper">
+          <div className="NotificationList">
+            <div className="bubble">السلام عليكم</div>
+          </div>
         </div>
         <div className="textdiv">
-          <TextFields />
-          <Button
-            size="small"
-            style={{
-              backgroundColor: 'transparent',
-              display: 'flex',
-              bottom: '3.5px',
-              justifyContent: 'flex-start'
-            }}>
-            <FaArrowRight className="notiarrow" />
-          </Button>
+          {/* <form onSubmit={this.submitText}> */}
+			<TextFields
+				value={this.state.textNoti}
+				onChange={(e) => this.setState({ textNoti: e.target.value })} 
+			/>
+            <Button
+              size="small"
+              style={{
+                backgroundColor: 'transparent',
+                display: 'flex',
+                bottom: '3.5px',
+                justifyContent: 'flex-start'
+              }}>
+              <FaArrowRight onClick={this.submitText} className="notiarrow" />
+            </Button>
         </div>
       </div>
     );
