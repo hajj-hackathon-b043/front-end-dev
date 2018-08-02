@@ -57,7 +57,7 @@ function SimpleCard(props) {
             هل انت بخير ؟
           </Typography>
           <hr />
-          <Typography component="p">{translate(locale, 'modalFAQ')}</Typography>
+          <Typography component="p">{translate(locale, 'FAQstwo')}</Typography>
         </CardContent>
         <CardActions>
           <Button size="small">
