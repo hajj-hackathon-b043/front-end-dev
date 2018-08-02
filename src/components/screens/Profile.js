@@ -38,7 +38,7 @@ class Profile extends Component {
                   top: '2px',
                   justifyContent: 'flex-start'
                 }}>
-                <FaArrowLeft className="bell" />
+                <FaArrowLeft onClick={() => this.props.history.push('/firstpage')} className="bell" />
               </Button>
               <p className="top-text">name</p>
               <p className="Id">ID</p>
@@ -51,7 +51,7 @@ class Profile extends Component {
                 position: 'relative',
                 height: '22px'
               }}>
-              <FaBell className="bell" />
+              <FaBell onClick={() => this.props.history.push('/Notificationpage')} className="bell" />
             </Button>
           </div>
         </div>

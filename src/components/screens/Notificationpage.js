@@ -19,7 +19,7 @@ class Notificationpage extends Component {
                 top: '2px',
                 justifyContent: 'flex-start'
               }}>
-              <FaArrowLeft className="notiarrow" />
+              <FaArrowLeft onClick={() => this.props.history.push('/Profile')} className="notiarrow" />
             </Button>
             <div className="navtextnoti">إعلام</div>
           </div>

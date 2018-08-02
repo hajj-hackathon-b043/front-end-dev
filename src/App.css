@@ -479,7 +479,13 @@ body * {
 }
 
 .Camera {
-  width: 350px;
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.Camera div {
+  border-width: 15px !important;
+  box-shadow: rgba(255, 0, 0, 0.5) 0px 0px 0px 2px inset !important;
 }
 
 .QRbutton {
