@@ -8,7 +8,7 @@ import { FaFemale } from 'react-icons/fa';
 import { FaMale } from 'react-icons/fa';
 import { FaUtensils } from 'react-icons/fa';
 import { FaBell } from 'react-icons/fa';
-
+import translate from '../../I18N/I8';
 //modal imported..
 import SimpleModalWrapped from './modal';
 
@@ -16,6 +16,25 @@ import SimpleModalWrapped from './modal';
 // import flag from './img/bangladesh.png';
 
 let flag = 'https://www.countryflags.io/be/flat/64.png ';
+
+const locale = {
+  profileMedical: {
+    en: 'Medical Center',
+    ar: 'مركز صحي'
+  },
+  profileCamp: {
+    en: 'Camp',
+    ar: 'السكن'
+  },
+  profileWC: {
+    en: 'W.C',
+    ar: 'دورات مياة'
+  },
+  profileFood: {
+    en: 'Food',
+    ar: 'غذاء'
+  }
+};
 
 class Profile extends Component {
   render() {
@@ -70,6 +89,8 @@ class Profile extends Component {
                   justifyContent: 'space-between'
                 }}>
                 <FaBriefcaseMedical className="Icons-select" />
+                <p className="white"> {translate(locale, 'profileMedical')}</p>
+
                 <p className="white">مركز صحي</p>
               </Button>
             </div>
@@ -86,6 +107,8 @@ class Profile extends Component {
                   justifyContent: 'space-between'
                 }}>
                 <FaWarehouse className="Icons-select" />
+                <p className="white"> {translate(locale, 'profileCamp')}</p>
+
                 <p className="white">السكن</p>
               </Button>
             </div>
@@ -104,6 +127,8 @@ class Profile extends Component {
                 }}>
                 {/* <FaMale className="Icons-select" /> */}
                 <FaFemale className="Icons-select" />
+                <p className="white"> {translate(locale, 'profileWC')}</p>
+
                 <p className="white">دورات مياه</p>
               </Button>
             </div>
@@ -120,6 +145,7 @@ class Profile extends Component {
                   justifyContent: 'space-between'
                 }}>
                 <FaUtensils className="Icons-select" />
+                <p className="white"> {translate(locale, 'profileFood')}</p>
                 <p className="white">غذاء</p>
               </Button>
             </div>
