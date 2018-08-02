@@ -3,9 +3,10 @@ color {
 }
 
 .Body {
-  background: #1a1b1e;
+  background: #f1f1f1;
   height: 100vh;
   width: 100vw;
+  max-width: 700px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -13,6 +14,7 @@ color {
   flex-direction: column;
   color: #0f9ef2;
   font-size: 1.5rem;
+  margin: auto;
 }
 .hr {
   width: 60%;
@@ -52,7 +54,7 @@ color {
 .text {
   top: 50%;
   font-size: 2.25rem;
-  color: #fff;
+  color: #000;
 }
 
 .loading {
@@ -70,8 +72,17 @@ color {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  padding: 20px;
   text-align: left;
+}
+
+.layer {
+  background-color: rgba(22, 22, 22, 0.65);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .bottom {
@@ -103,25 +114,23 @@ color {
   display: flex;
   width: 100%;
   height: 100%;
-}
-
-.Icons-select {
-  font-size: 4rem;
-  color: #fff;
-}
-
-.select {
-  color: #0f9ef2;
+  flex-direction: column;
   padding: 20px;
 }
 
+.Icons-select {
+  font-size: 2rem;
+  color: #000;
+}
+
 .white {
-  color: #fff;
+  color: #000;
+  font-size: 1rem;
 }
 
 .bell {
-  position: absolute;
-  right: 15px;
+  color: #fff;
+  font-size: 1.25rem;
 }
 
 .NotificationList {
@@ -133,4 +142,23 @@ color {
 
 .back {
   margin: 5px;
+}
+
+.top-text {
+  font-size: 1.25rem;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.qustionsarea {
+  background-color: red;
+  width: 100%;
+  height: 80%;
+  display: flex;
 }

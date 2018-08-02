@@ -8,68 +8,132 @@ import { FaFemale } from 'react-icons/fa';
 import { FaMale } from 'react-icons/fa';
 import { FaUtensils } from 'react-icons/fa';
 import { FaBell } from 'react-icons/fa';
+import { IoMdHelpCircleOutline } from 'react-icons/io';
+
+// import flag from './img/ksa.png';
+// import flag from './img/bangladesh.png';
+
+let flag = 'https://www.countryflags.io/be/flat/64.png ';
 
 class Profile extends Component {
   render() {
     return (
       <div className="Body">
-        <div className="top">
-          <FaBell className="bell" />
-
-          <div className="nav">
-            <FaArrowLeft />
-            <p>name</p>
-            <p className="Id">ID</p>
-            <p>Nationality</p>
+        <div
+          className="top"
+          style={{
+            background: 'url(' + flag + ')',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}>
+          <div className="layer">
+            <div className="nav">
+              <Button
+                size="small"
+                style={{
+                  backgroundColor: 'transparent',
+                  display: 'flex',
+                  top: '2px',
+                  justifyContent: 'flex-start'
+                }}>
+                <FaArrowLeft className="bell" />
+              </Button>
+              <p className="top-text">name</p>
+              <p className="Id">ID</p>
+              <p className="top-text">Nationality</p>
+            </div>
+            <Button
+              size="small"
+              style={{
+                backgroundColor: 'transparent',
+                position: 'relative',
+                height: '22px'
+              }}>
+              <FaBell className="bell" />
+            </Button>
           </div>
         </div>
         <div className="bottom">
           <div className="containbox">
             <div className="box">
               <Button
-                size="large"
+                variant="contained"
                 className="select"
                 style={{
-                  backgroundColor: 'transparent'
+                  backgroundColor: '#fbfbfb',
+                  borderRadius: '15px',
+                  width: '350px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between'
                 }}>
                 <FaBriefcaseMedical className="Icons-select" />
+                <p className="white">مركز صحي</p>
               </Button>
             </div>
             <div className="box">
               <Button
-                size="large"
+                variant="contained"
                 className="select"
                 style={{
-                  backgroundColor: 'transparent'
+                  backgroundColor: '#fbfbfb',
+                  borderRadius: '15px',
+                  width: '350px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between'
                 }}>
                 <FaWarehouse className="Icons-select" />
+                <p className="white">السكن</p>
               </Button>
             </div>
-          </div>
-          <div className="containbox">
+
             <div className="box">
               <Button
-                size="large"
+                variant="contained"
                 className="select"
                 style={{
-                  backgroundColor: 'transparent'
+                  backgroundColor: '#fbfbfb',
+                  borderRadius: '15px',
+                  width: '350px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between'
                 }}>
-                <p className="white">W.C</p>
                 {/* <FaMale className="Icons-select" /> */}
                 <FaFemale className="Icons-select" />
+                <p className="white">دورات مياه</p>
               </Button>
             </div>
             <div className="box">
               <Button
-                size="large"
+                variant="contained"
                 className="select"
                 style={{
-                  backgroundColor: 'transparent'
+                  backgroundColor: '#fbfbfb',
+                  borderRadius: '15px',
+                  width: '350px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between'
                 }}>
                 <FaUtensils className="Icons-select" />
+                <p className="white">غذاء</p>
               </Button>
             </div>
           </div>
+          <Button
+            variant="fab"
+            color="primary"
+            aria-label="Add"
+            style={{
+              position: 'relative',
+              alignSelf: 'flex-end',
+              bottom: '10px',
+              right: '10px'
+            }}>
+            <IoMdHelpCircleOutline className="bell" />
+          </Button>
         </div>
       </div>
     );

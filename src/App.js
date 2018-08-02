@@ -8,6 +8,7 @@ import QRscan from './components/screens/QRscan';
 import firstpage from './components/screens/firstpage';
 import Profile from './components/screens/Profile';
 import Notificationpage from './components/screens/Notificationpage';
+import SimpleModalWrapped from './components/screens/modal';
 
 import { launchApp } from './actions';
 
@@ -25,6 +26,7 @@ class App extends Component {
         <Route path="/firstpage" component={firstpage} />
         <Route path="/Profile" component={Profile} />
         <Route path="/Notificationpage" component={Notificationpage} />
+        <Route path="/SimpleModalWrapped" component={SimpleModalWrapped} />
       </div>
     );
   }
