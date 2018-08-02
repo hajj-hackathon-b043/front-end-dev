@@ -5,9 +5,12 @@ import 'normalize.css';
 import './App.css';
 import IntroWizardCont from './containers/IntroWizardCont';
 import Mappage from './components/mappage';
+import firebase from './fire';
 
 import Map from './components/Map'
 import { launchApp } from './actions';
+
+console.log(firebase)
 
 class App extends Component {
 	componentDidMount() {
