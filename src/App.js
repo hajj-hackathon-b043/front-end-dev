@@ -9,6 +9,8 @@ import firstpage from './components/screens/firstpage';
 import Profile from './components/screens/Profile';
 import Notificationpage from './components/screens/Notificationpage';
 
+import './fire';
+
 class App extends Component {
   render() {
     return (

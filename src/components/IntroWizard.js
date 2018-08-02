@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import queryString from 'query-string';
+// import queryString from 'query-string';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -17,8 +17,8 @@ class IntroWizard extends Component {
     totalSteps: 4
   };
   getQueryParams = () => {
-    let { search } = this.props.location;
-    search = queryString.parse(search);
+    // let { search } = this.props.location;
+    // search = queryString.parse(search);
   };
   updateCurrentStep = val => {
     let { currentStep, totalSteps } = this.state;
