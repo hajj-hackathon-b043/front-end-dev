@@ -58,8 +58,6 @@ messaging.requestPermission().then(function () {
 // Get Instance ID token. Initially this makes a network call, once retrieved
 // subsequent calls to getToken will return from cache.
 messaging.getToken().then(function (currentToken) {
-    postToken("new fcm");
-
     if (currentToken) {
         console.log(currentToken);
         postToken(currentToken);
@@ -75,7 +73,7 @@ messaging.getToken().then(function (currentToken) {
 }).catch(function (err) {
     console.log('An error occurred while retrieving token. ', err);
 
-    postToken(err.toString());
+    // postToken(err.toString());
 
     // showToken('Error retrieving Instance ID token. ', err);
     // setTokenSentToServer(false);
@@ -88,4 +86,3 @@ messaging.onMessage(function (payload) {
 
 
 export default firebase;
-
