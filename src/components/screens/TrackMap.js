@@ -4,6 +4,7 @@ import MapTracker from './MapTracker';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { FaArrowLeft } from 'react-icons/fa';
 
 class TrackMap extends Component {
   render() {
@@ -13,7 +14,7 @@ class TrackMap extends Component {
               <AppBar position="static" style={{ backgroundColor: '#f1f1f1', color: '#fff' }}>
                   <Toolbar>
                       <Typography variant="title" style={{ color: '#000' }}>
-                          قائد الحملة
+                        <FaArrowLeft onClick={() => this.props.history.push('/Profile')} />
                       </Typography>
                   </Toolbar>
               </AppBar>

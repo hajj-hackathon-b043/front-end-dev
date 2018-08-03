@@ -21,22 +21,22 @@ let flag = 'https://www.countryflags.io/be/flat/64.png ';
 const locale = {
   profileMedical: {
     en: 'Medical Center',
-    ar: 'مركز صحي',
+    ar: '',
     bn: 'হাসপাতাল'
   },
   profileCamp: {
     en: 'Camp',
-    ar: 'السكن',
+    ar: '',
     bn: 'তাঁবু'
   },
   profileWC: {
     en: 'W.C',
-    ar: 'دورات مياة',
+    ar: '',
     bn: 'টয়লেট'
   },
   profileFood: {
     en: 'Food',
-    ar: 'غذاء',
+    ar: '',
     bn: 'খাবার'
   }
 };
@@ -106,6 +106,26 @@ class Profile extends Component {
               <Button
                 variant="contained"
                 className="select"
+                style={{
+                  backgroundColor: '#fbfbfb',
+                  borderRadius: '15px',
+                  width: '350px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between'
+                }}>
+                <FaWarehouse className="Icons-select" />
+                <p className="white"> {translate(locale, 'profileCamp')}</p>
+
+                <p className="white">السكن</p>
+              </Button>
+            </div>
+
+            <div className="box">
+              <Button
+                variant="contained"
+                className="select"
+                onClick={() => this.props.history.push('/track')}
                 style={{
                   backgroundColor: '#fbfbfb',
                   borderRadius: '15px',
