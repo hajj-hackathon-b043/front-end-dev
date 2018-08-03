@@ -15,11 +15,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route path="/Map" component={Mappage} />
-        <Route path="/QRscan" component={QRscan} />
-        <Route path="/firstpage" component={firstpage} />
-        <Route path="/Profile" component={Profile} />
-        <Route path="/Notificationpage" component={Notificationpage} />
+        <Route exact path="/Map" component={Mappage} />
+        <Route exact path="/QRscan" component={QRscan} />
+        <Route exact path="/" component={firstpage} />
+        <Route exact path="/Profile" component={Profile} />
+        <Route exact path="/Notificationpage" component={Notificationpage} />
       </div>
     );
   }

@@ -5,6 +5,7 @@ import QrReader from 'react-qr-reader';
 import { FaQrcode } from 'react-icons/fa';
 import { FaHandPointer } from 'react-icons/fa';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import axios from 'axios';
 
 class QRscan extends Component {
   timer = null;
@@ -29,9 +30,12 @@ class QRscan extends Component {
   }
 
   openQRscan = () => {
-    this.setState({ 
-		showCamera: true
-	})
+    this.setState({
+			showCamera: true
+		});
+	setTimeout(() => {
+		this.setState({ showCamera: false });
+	}, 1000 * 30)
   }
 
   handleScanError = (error) => {
@@ -46,11 +50,18 @@ class QRscan extends Component {
 		this.setState({
 			showCamera: false
 		});
-		this.props.dispatch({
-			type: 'SCAN_DATA_SUCCESS',
-			data
-		});
 		this.props.history.push('/Profile');
+		
+		const group = 'b-45';
+    const url = `https://desolate-caverns-43961.herokuapp.com/user/${data}`;
+		axios.get(url).then(res => {
+
+			this.props.dispatch({
+				type: 'SCAN_DATA_SUCCESS',
+				data: res.data
+			});
+			localStorage.setItem('lang', res.data.lang);
+		});
 	}
   }
 

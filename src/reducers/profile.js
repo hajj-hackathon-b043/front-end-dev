@@ -3,7 +3,7 @@ export default function(state = {}, action) {
         case 'SCAN_DATA_SUCCESS':
             return {
                 ...state,
-                QRcodeData: action.data
+                ...action.data
             };
             
         default: 

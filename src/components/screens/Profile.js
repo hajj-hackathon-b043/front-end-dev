@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import './screens.css';
 import { FaArrowLeft } from 'react-icons/fa';
 import Button from '@material-ui/core/Button';
@@ -20,33 +21,40 @@ let flag = 'https://www.countryflags.io/be/flat/64.png ';
 const locale = {
   profileMedical: {
     en: 'Medical Center',
-    ar: 'مركز صحي'
+    ar: 'مركز صحي',
+    bn: 'হাসপাতাল'
   },
   profileCamp: {
     en: 'Camp',
-    ar: 'السكن'
+    ar: 'السكن',
+    bn: 'তাঁবু'
   },
   profileWC: {
     en: 'W.C',
-    ar: 'دورات مياة'
+    ar: 'دورات مياة',
+    bn: 'টয়লেট'
   },
   profileFood: {
     en: 'Food',
-    ar: 'غذاء'
+    ar: 'غذاء',
+    bn: 'খাবার'
   }
 };
 
 class Profile extends Component {
   render() {
+    const { id, name, country, lang } = this.props.profile;
+    const flagUrl = `./img/${lang}.png`;
+
     return (
       <div className="Body">
         <div
           className="top"
           style={{
-            background: 'url(' + flag + ')',
+            background: 'url(' + flagUrl + ')',
             backgroundPosition: 'center',
             backgroundSize: 'cover'
-          }}>
+          }}> 
           <div className="layer">
             <div className="nav">
               <Button
@@ -57,11 +65,11 @@ class Profile extends Component {
                   top: '2px',
                   justifyContent: 'flex-start'
                 }}>
-                <FaArrowLeft onClick={() => this.props.history.push('/firstpage')} className="bell" />
+                <FaArrowLeft onClick={() => this.props.history.push('/')} className="bell" />
               </Button>
-              <p className="top-text">name</p>
-              <p className="Id">ID</p>
-              <p className="top-text">Nationality</p>
+              <p className="top-text">Name: { name }</p>
+              <p className="Id">ID: { id }</p>
+              <p className="top-text">Nationality: { country }</p>
             </div>
             <Button
               size="small"
@@ -158,4 +166,10 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+const mapStateToProps = state => {
+  return {
+    ...state
+  }
+};
+
+export default connect(mapStateToProps)(Profile);

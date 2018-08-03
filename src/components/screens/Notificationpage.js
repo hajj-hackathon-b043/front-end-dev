@@ -4,10 +4,12 @@ import { FaArrowLeft } from 'react-icons/fa';
 import TextFields from './textarea';
 import { FaArrowRight } from 'react-icons/fa';
 import Button from '@material-ui/core/Button';
+import axios from 'axios';
 
 class Notificationpage extends Component {
 	state = {
-		textNoti: ''
+    textNoti: '',
+    notifications: []
 	}
 
 	submitText = (e) => {
@@ -16,7 +18,17 @@ class Notificationpage extends Component {
 		if (textNoti) {
 			this.props.history.push('/Profile');
 		}
-	}
+  }
+  fetchNotifications = () => {
+    const group = 'b-45';
+    const url = `https://desolate-caverns-43961.herokuapp.com/notifications/${group}`;
+    axios.get(url).then(res => {
+      this.setState({ notifications: res.data });
+    });
+  }
+  componentDidMount() {
+    this.fetchNotifications();
+  }
   render() {
     return (
       <div className="Body">
@@ -37,12 +49,14 @@ class Notificationpage extends Component {
         </div>
         <div className="NotificationList-wrapper">
           <div className="NotificationList">
-            <div className="bubble">السلام عليكم</div>
+            {this.state.notifications.map((notification, i) => {
+              return <div key={i} className="bubble">{notification.message}</div>
+            })}
           </div>
         </div>
-        <div className="textdiv">
+        {/* <div className="textdiv"> */}
           {/* <form onSubmit={this.submitText}> */}
-			<TextFields
+			{/* <TextFields
 				value={this.state.textNoti}
 				onChange={(e) => this.setState({ textNoti: e.target.value })} 
 			/>
@@ -55,8 +69,8 @@ class Notificationpage extends Component {
                 justifyContent: 'flex-start'
               }}>
               <FaArrowRight onClick={this.submitText} className="notiarrow" />
-            </Button>
-        </div>
+            </Button> */}
+        {/* </div> */}
       </div>
     );
   }
