@@ -30,8 +30,8 @@ class MapTracker extends Component {
     };
 
     componentDidMount() {
-        // const socket = io('https://desolate-caverns-43961.herokuapp.com/');
-        const socket = io('http://localhost:3000');
+        const socket = io('https://desolate-caverns-43961.herokuapp.com/');
+        // const socket = io('http://localhost:3000');
         const self = this;
         socket.on('locations', function (locations) {
             console.log(locations);
