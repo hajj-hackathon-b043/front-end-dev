@@ -31,7 +31,6 @@ async function postToken(token) {
             headers: requestOptions.headers,
             body: JSON.stringify(requestOptions.body)
         });
-        console.log(result);
         // if (!result)
         // throw "No Response";
 
@@ -47,7 +46,6 @@ const messaging = firebase.messaging();
 messaging.usePublicVapidKey("BCdr-njawTNFjVAG7M-4JQDSzpVvJwHfFRUQlrfJjCzDqdWsk1Hl-6aOISyD38xVF7-qhDq8Ipp5FA9aM9-hux0");
 
 messaging.requestPermission().then(function () {
-    console.log('Notification permission granted.');
     // TODO(developer): Retrieve an Instance ID token for use with FCM.
     // ...
 }).catch(function (err) {
@@ -59,7 +57,6 @@ messaging.requestPermission().then(function () {
 // subsequent calls to getToken will return from cache.
 messaging.getToken().then(function (currentToken) {
     if (currentToken) {
-        console.log(currentToken);
         postToken(currentToken);
         // sendTokenToServer(currentToken);
         // updateUIForPushEnabled(currentToken);

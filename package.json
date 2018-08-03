@@ -16,13 +16,14 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "socket.io-client": "^2.1.1"
   },
   "scripts": {
     "start": "npm run copy && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "copy": "cp -Ri ./src/img ./public"
+    "copy": "rm -rf ./public/img && cp -Ri ./src/img ./public"
   }
 }

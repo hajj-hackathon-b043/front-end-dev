@@ -13,7 +13,8 @@ class QRscan extends Component {
   state = {
 	completed: 0,
 	showCamera: false,
-	showError: null
+	showError: null,
+	scanSuccess: false
   };
 
   componentDidMount() {
@@ -48,25 +49,30 @@ class QRscan extends Component {
   handleScanSuccess= (data) => {
 	if(data) {
 		this.setState({
-			showCamera: false
+			showCamera: false,
+			scanSuccess: true
 		});
-		this.props.history.push('/Profile');
-		
 		const group = 'b-45';
-    const url = `https://desolate-caverns-43961.herokuapp.com/user/${data}`;
+		const url = `https://desolate-caverns-43961.herokuapp.com/user/${data}`;
+		console.log(url)
 		axios.get(url).then(res => {
+			console.log(res);
 
 			this.props.dispatch({
 				type: 'SCAN_DATA_SUCCESS',
 				data: res.data
 			});
-			localStorage.setItem('lang', res.data.lang);
-		});
+			localStorage.setItem('lang', res.data.lang || 'en');
+			this.props.history.push('/Profile');
+		})
+		.catch(err => {
+			console.log(err);
+		})
 	}
   }
 
   render() {
-	  const { showCamera, showError } = this.state;
+	  const { showCamera, showError, scanSuccess } = this.state;
 	  
     return (
       <div className="Body">
@@ -94,6 +100,9 @@ class QRscan extends Component {
 			}
 			{ showError && 
             	<p className="ERROR">حدث خطاء {showError}</p>
+			}
+			{ scanSuccess && 
+            	<p className="GREEN">User Found. Processing Data...</p>
 			}
           </div>
         </div>

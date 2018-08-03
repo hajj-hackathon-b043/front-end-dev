@@ -97,7 +97,7 @@ class Profile extends Component {
                   justifyContent: 'space-between'
                 }}>
                 <FaBriefcaseMedical className="Icons-select" />
-                <p className="white"> {translate(locale, 'profileMedical')}</p>
+                <p className="white"> {translate(locale, 'profileMedical') }</p>
 
                 <p className="white">مركز صحي</p>
               </Button>
