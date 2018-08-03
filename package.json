@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "npm run copy && react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run copy && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "copy": "rm -rf ./public/img && cp -Ri ./src/img ./public"
